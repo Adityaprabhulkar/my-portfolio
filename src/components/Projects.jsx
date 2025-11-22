@@ -13,7 +13,7 @@ export default function Projects() {
       title: "Portfolio", 
       desc: "My personal portfolio website.",
       img: "/portfolio.png",
-      url: "https://adityaprabhulkar.github.io/"
+      url: "https://my-portfolio-me8un2ffa-aditya-prabhulkar-s-projects.vercel.app/"
     },
     { 
       title: "Weather App", 

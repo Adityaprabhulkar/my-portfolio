@@ -3,24 +3,19 @@ import { Typewriter } from "react-simple-typewriter";
 
 export default function Hero() {
   return (
-<section
-  id="home"
-  className="
-    min-h-screen flex flex-col md:flex-row items-center 
-    justify-center md:justify-between
-    px-14 py-28
-    bg-gradient-to-b
-    from-[#0b0f19]
-    via-[#0c1122]
-    to-[#1a0b25]
-    text-white relative overflow-hidden
-  "
->
-
-   
-      {/* <div className="absolute -top-24 -left-20 w-72 h-72 bg-purple-600/20 blur-3xl rounded-full"></div>
-      <div className="absolute bottom-0 right-0 w-80 h-80 bg-blue-500/20 blur-3xl rounded-full"></div> */}
-
+        <section
+          id="home"
+          className="
+            min-h-screen flex flex-col md:flex-row items-center 
+            justify-center md:justify-between
+            px-14 py-28
+            bg-gradient-to-b
+            from-[#0b0f19]
+            via-[#0c1122]
+            to-[#1a0b25]
+            text-white relative overflow-hidden
+          "
+        >
     
       <motion.div
         className=" ml-20 max-w-xl space-y-4 z-10"
@@ -35,7 +30,7 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
         >
           Hi, I'm{" "}
-          <span className="text-purple-400 ">
+          <span className="text-purple-400 inline-block min-w-[210px] ">
             <Typewriter
               words={["Aditya", "Web Developer", "UI/UX Designer"]}
               loop={true}
@@ -94,7 +89,7 @@ export default function Hero() {
         <motion.img
           src="/my-hero2.png"
           alt="Hero"
-          className=" mr-20 rounded-2xl w-[300px] md:w-[420px] drop-shadow-[0_0_15px_rgba(150,000,205,0.6)]"
+          className=" m-20 rounded-2xl w-[300px] md:w-[420px] drop-shadow-[0_0_15px_rgba(150,000,205,0.6)]"
           initial={{ y: 0 }}
           animate={{
             y: [0, -12, 0], 
