@@ -3,18 +3,19 @@ import { Typewriter } from "react-simple-typewriter";
 
 export default function Hero() {
   return (
-    <section
-      id="home"
-      className="
-        min-h-screen flex flex-col md:flex-row items-center justify-between 
-        px-14 py-28
-        bg-gradient-to-b
-        from-[#0b0f19]
-        via-[#0c1122]
-        to-[#1a0b25]
-        text-white relative overflow-hidden
-      "
-    >
+<section
+  id="home"
+  className="
+    min-h-screen flex flex-col md:flex-row items-center 
+    justify-center md:justify-between
+    px-14 py-28
+    bg-gradient-to-b
+    from-[#0b0f19]
+    via-[#0c1122]
+    to-[#1a0b25]
+    text-white relative overflow-hidden
+  "
+>
 
    
       {/* <div className="absolute -top-24 -left-20 w-72 h-72 bg-purple-600/20 blur-3xl rounded-full"></div>

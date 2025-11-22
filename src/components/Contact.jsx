@@ -75,7 +75,7 @@ export default function Contact() {
           className="flex justify-center gap-14 pt-6"
         >
           <motion.a
-            href="https://www.linkedin.com/in/adityaprabhulkar"
+            href="https://www.linkedin.com/in/aditya-prabhulkar-0a17a8346/"
             target="_blank"
             whileHover={{ scale: 1.2, rotate: 5 }}
             whileTap={{ scale: 0.9 }}
