@@ -34,23 +34,27 @@ export default function About() {
 
  
         <motion.div
-          initial={{ opacity: 0, x: 40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.7 }}
-        >
-          <p className="text-lg text-gray-700 leading-7">
-            Hello! I'm <b className="text-purple-600">Aditya</b>, a passionate Web Developer. 
+            initial={{ opacity: 0, x: 40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7 }}
+          >
+          <p className="text-lg text-gray-700 dark:text-gray-300 leading-7">
+            Hello! I'm <b className="text-purple-600">Aditya</b>, a passionate Frontend Developer. 
             I love building clean, responsive, and interactive websites using modern 
-            technologies like <b>MERN Stack</b>.
+            technologies like <b>React, JavaScript, Tailwind CSS & MERN Stack</b>.
           </p>
 
-          <p className="mt-4 text-lg text-gray-700 leading-7">
-            Currently, I’m learning advanced React, UI/UX, animations & backend 
-            development — aiming to become an industry-ready full-stack developer.
-          </p>
+            <p className="mt-4 text-lg text-gray-700 dark:text-gray-300 leading-7">
+              I am currently working at 
+              <b className="text-purple-600"> Hypes</b> as a 
+              <b className="text-purple-600"> Frontend Developer</b>,
+              where I build modern UI, animations and smooth user experiences.
+            </p>
 
-
-    
+            <p className="mt-4 text-lg text-gray-700 dark:text-gray-300 leading-7">
+              I’m also learning advanced React, UI/UX and backend development — 
+              aiming to become an industry-ready full-stack developer.
+            </p>
           <motion.a
             href="/Aditya_Resume.pdf"
             target="_blank"
@@ -87,17 +91,13 @@ export default function About() {
               "
             ></span>
 
-            <span
-              className="
-                relative z-10
-              "
-            >
+            <span className="relative z-10">
               Download Resume
             </span>
           </motion.a>
+        </motion.div>
+      </div>
+     </section>
 
-                  </motion.div>
-                </div>
-              </section>
-            );
-          }
+    );
+  };

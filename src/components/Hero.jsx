@@ -66,7 +66,7 @@ export default function Hero() {
         alt="Hero"
         initial={{ opacity: 0, scale: 0.9, x: 40 }}
         animate={{
-          opacity: 1,
+          opacity: 5,
           scale: 1,
           x: 0,
           y: [0, -12, 0], // floating animation
@@ -80,7 +80,7 @@ export default function Hero() {
           },
         }}
         whileHover={{ scale: 1.06 }}
-        className="w-[450px] md:w-[400px] rounded-2xl shadow-3xl mt-10 md:mt-0 cursor-pointer"
+        className="w-[450px] md:w-[500px] rounded-2xl shadow-3xl mt-10 md:mt-0 cursor-pointer"
       />
     </section>
   );

@@ -13,10 +13,10 @@ export default function Skills() {
     { name: "Git", icon: <FaGitAlt className="text-red-600" /> },
   ];
 
-  // random number helper
+ 
   const random = (max) => Math.floor(Math.random() * max) - max / 2;
 
-  // function that returns a variant object for each item
+ 
   const getVariants = () => ({
     hidden: {
       opacity: 0,
@@ -59,7 +59,7 @@ export default function Skills() {
         {skills.map((s) => (
           <motion.div
             key={s.name}
-            variants={getVariants()}   // ← Ab har skill ka apna random path hoga
+            variants={getVariants()}    
             whileHover={{
               scale: 1.15,
               rotateZ: 6,

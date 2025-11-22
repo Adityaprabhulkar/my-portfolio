@@ -26,7 +26,7 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* CONTACT + SOCIALS */}
+     
         <div>
           <h3 className="text-xl font-semibold text-blue-300 mb-3 drop-shadow-[0_0_9px_#3b82f6]">Contact</h3>
           <p className="text-sm">📞 +91 93220 29196</p>
@@ -49,7 +49,7 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* BOTTOM COPYRIGHT */}
+    
       <div className="border-t border-gray-700 mt-10 pt-5 text-center text-sm">
         © 2025 Aditya — Made with ❤️  
       </div>
