@@ -13,38 +13,42 @@ export default function Skills() {
     { name: "Git", icon: <FaGitAlt className="text-red-600" /> },
   ];
 
+  // random number helper
   const random = (max) => Math.floor(Math.random() * max) - max / 2;
 
-  const mixerStart = () => ({
-    opacity: 0,
-    scale: 0.4,
-    x: random(300),
-    y: random(300),
-    rotateX: random(720),
-    rotateY: random(720),
-    rotateZ: random(720),
-  });
-
-  const mixerSpin = {
-    opacity: 1,
-    scale: 1,
-    x: 0,
-    y: 0,
-    rotateX: 0,
-    rotateY: 0,
-    rotateZ: 0,
-    transition: {
-      duration: 1.6,
-      ease: "easeOut",
-      type: "spring",
-      stiffness: 120,
-      damping: 10,
+  // function that returns a variant object for each item
+  const getVariants = () => ({
+    hidden: {
+      opacity: 0,
+      scale: 0.4,
+      x: random(300),
+      y: random(300),
+      rotateX: random(720),
+      rotateY: random(720),
+      rotateZ: random(720),
     },
-  };
+    visible: {
+      opacity: 1,
+      scale: 1,
+      x: 0,
+      y: 0,
+      rotateX: 0,
+      rotateY: 0,
+      rotateZ: 0,
+      transition: {
+        duration: 1.6,
+        ease: "easeOut",
+        type: "spring",
+        stiffness: 120,
+        damping: 10,
+      },
+    },
+  });
 
   return (
     <section className="py-20 px-8">
-      <h2 className="text-4xl font-bold mb-8">Skills</h2>
+      <h2
+      id="skills" className="text-4xl font-bold mb-8">Tech Stack</h2>
 
       <motion.div
         className="flex flex-wrap gap-6"
@@ -55,20 +59,17 @@ export default function Skills() {
         {skills.map((s) => (
           <motion.div
             key={s.name}
-            variants={{
-              hidden: mixerStart(),
-              visible: mixerSpin,
-            }}
+            variants={getVariants()}   // ← Ab har skill ka apna random path hoga
             whileHover={{
               scale: 1.15,
               rotateZ: 6,
               transition: { duration: 0.2 },
             }}
             className="flex items-center gap-3 p-4 bg-gray-200 dark:bg-gray-700 
-                       rounded-xl shadow-md cursor-pointer"
+                       rounded-xl shadow"
           >
             <span className="text-3xl">{s.icon}</span>
-            <span className="font-semibold">{s.name}</span>
+            <span className="font-semibold text-lg">{s.name}</span>
           </motion.div>
         ))}
       </motion.div>

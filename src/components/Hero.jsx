@@ -1,14 +1,28 @@
 import { motion } from "framer-motion";
+import { Typewriter } from "react-simple-typewriter";
+
 
 export default function Hero() {
   return (
-    <section
-      className="min-h-screen flex flex-col md:flex-row items-center 
-                 justify-between px-14 py-28
-                 bg-gradient-to-b from-white to-blue-50 
-                 dark:from-gray-900 dark:to-gray-800"
-    >
-      {/* LEFT CONTENT */}
+<section
+  id="home"
+  className="
+    min-h-screen flex flex-col md:flex-row items-center justify-between 
+    px-14 py-28
+
+    /* GLASS + GRADIENT MATCH NAVBAR */
+    bg-gradient-to-b 
+    from-purple-50/70 
+    via-white/70 
+    to-purple-100/60 
+
+    dark:from-gray-900/80 
+    dark:via-gray-800/70 
+    dark:to-purple-900/30
+    backdrop-blur-sm
+  "
+>
+     
       <motion.div
         className="max-w-xl space-y-4"
         initial={{ opacity: 0, x: -40 }}
@@ -21,7 +35,18 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          Hi, I'm <span className="text-blue-500">Aditya</span>
+          Hi, I'm{" "}
+          <span className="text-purple-700">
+            <Typewriter
+              words={["Aditya", "Web Developer", "UI/UX Designer"]}
+              loop={true}
+              cursor
+              cursorStyle="|"
+              typeSpeed={80}
+              deleteSpeed={50}
+              delaySpeed={1500}
+            />
+          </span>
         </motion.h1>
 
         <motion.p
@@ -31,11 +56,11 @@ export default function Hero() {
           transition={{ duration: 0.9 }}
         >
           Web Development & UI/UX → Code + Creativity ={" "}
-          <span className="text-blue-500 font-medium">Awesome Websites!</span>
+          <span className="text-purple-700 font-medium">Awesome Websites!</span>
         </motion.p>
       </motion.div>
 
-      {/* RIGHT SIDE IMAGE */}
+   
       <motion.img
         src="/my-hero2.png"
         alt="Hero"
@@ -55,7 +80,7 @@ export default function Hero() {
           },
         }}
         whileHover={{ scale: 1.06 }}
-        className="w-[460px] md:w-[600px] rounded-2xl shadow-2xl mt-10 md:mt-0"
+        className="w-[450px] md:w-[400px] rounded-2xl shadow-3xl mt-10 md:mt-0 cursor-pointer"
       />
     </section>
   );

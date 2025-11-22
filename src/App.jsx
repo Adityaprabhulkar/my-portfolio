@@ -7,18 +7,33 @@ import Projects from './components/Projects'
 import Contact from './components/Contact'
 import './App.css'
 import Footer from './components/Footer'
+import Education from './components/Education'
+import { useState, useEffect } from 'react'
 
 export default function App () {
-  return (
-    <div className="bg-gradient-to-b from-white via-blue-50 to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-black min-h-screen">
-      {/* <ParticlesBackground /> */}
-      <Navbar />
-      <Hero />
-      <About />
-      <Skills /> 
-      <Projects/>
-      <Contact />
-      <Footer/>
-    </div>
-  )
-}
+    const [bgChange, setBgChange] = useState(false);
+
+      useEffect(() => {
+        const handleScroll = () => {
+          setBgChange(window.scrollY > 100); // 100px scroll ke baad change
+        };
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+      }, []);
+      return (
+        <div className={`
+            transition-all duration-500
+            ${bgChange ? "bg-gray-100 dark:bg-gray-800" : "bg-white dark:bg-black"}
+          `}>
+  
+          <Navbar />
+          <Hero />
+          <About />
+          <Education/>
+          <Skills /> 
+          <Projects/>
+          <Contact />
+          <Footer/>
+        </div>
+      )
+    }
