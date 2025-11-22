@@ -1,42 +1,40 @@
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 
-
 export default function Hero() {
   return (
-<section
-  id="home"
-  className="
-    min-h-screen flex flex-col md:flex-row items-center justify-between 
-    px-14 py-28
+    <section
+      id="home"
+      className="
+        min-h-screen flex flex-col md:flex-row items-center justify-between 
+        px-14 py-28
+        bg-gradient-to-b
+        from-[#0b0f19]
+        via-[#0c1122]
+        to-[#1a0b25]
+        text-white relative overflow-hidden
+      "
+    >
 
-    /* GLASS + GRADIENT MATCH NAVBAR */
-    bg-gradient-to-b 
-    from-purple-50/70 
-    via-white/70 
-    to-purple-100/60 
+   
+      {/* <div className="absolute -top-24 -left-20 w-72 h-72 bg-purple-600/20 blur-3xl rounded-full"></div>
+      <div className="absolute bottom-0 right-0 w-80 h-80 bg-blue-500/20 blur-3xl rounded-full"></div> */}
 
-    dark:from-gray-900/80 
-    dark:via-gray-800/70 
-    dark:to-purple-900/30
-    backdrop-blur-sm
-  "
->
-     
+    
       <motion.div
-        className="max-w-xl space-y-4"
+        className=" ml-20 max-w-xl space-y-4 z-10"
         initial={{ opacity: 0, x: -40 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
       >
         <motion.h1
-          className="text-6xl font-bold"
+          className="text-6xl font-bold drop-shadow-[0_0_20px_rgba(150,100,255,0.4)]"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
           Hi, I'm{" "}
-          <span className="text-purple-700">
+          <span className="text-purple-400 ">
             <Typewriter
               words={["Aditya", "Web Developer", "UI/UX Designer"]}
               loop={true}
@@ -50,38 +48,63 @@ export default function Hero() {
         </motion.h1>
 
         <motion.p
-          className="text-xl text-gray-600 dark:text-gray-300"
+          className="text-xl text-gray-200 drop-shadow-[0_0_5px_rgba(120,150,255,0.4)]"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
         >
-          Web Development & UI/UX → Code + Creativity ={" "}
-          <span className="text-purple-700 font-medium">Awesome Websites!</span>
+          I'm a passionate MERN stack developer who loves building beautiful UI
+          and smooth digital experiences.
         </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
+          <a
+            href="#contact"
+            className="
+              px-6 py-3 bg-purple-600 hover:bg-purple-700 
+              rounded-xl font-semibold text-white
+              drop-shadow-[0_0_15px_rgba(150,000,205,0.6)]
+              transition-all duration-300
+            "
+          >
+            Contact Me
+          </a>
+        </motion.div>
       </motion.div>
 
    
-      <motion.img
-        src="/my-hero2.png"
-        alt="Hero"
-        initial={{ opacity: 0, scale: 0.9, x: 40 }}
-        animate={{
-          opacity: 5,
-          scale: 1,
-          x: 0,
-          y: [0, -12, 0], // floating animation
-        }}
-        transition={{
-          duration: 0.5,
-          y: {
+      <motion.div
+        className="relative flex justify-center items-center mt-10 md:mt-0"
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1 }}
+      >
+     
+        <div className="
+          absolute bottom-0 w-40 h-6
+          bg-purple-500/30 blur-2xl rounded-full opacity-60
+        "></div>
+
+   
+        <motion.img
+          src="/my-hero2.png"
+          alt="Hero"
+          className=" mr-20 rounded-2xl w-[300px] md:w-[420px] drop-shadow-[0_0_15px_rgba(150,000,205,0.6)]"
+          initial={{ y: 0 }}
+          animate={{
+            y: [0, -12, 0], 
+          }}
+          transition={{
             duration: 4,
             repeat: Infinity,
             ease: "easeInOut",
-          },
-        }}
-        whileHover={{ scale: 1.06 }}
-        className="w-[450px] md:w-[500px] rounded-2xl shadow-3xl mt-10 md:mt-0 cursor-pointer"
-      />
+          }}
+        />
+      </motion.div>
     </section>
   );
 }

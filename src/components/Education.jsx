@@ -5,33 +5,41 @@ export default function Education() {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay: 0.3 }}
+      transition={{ duration: 0.6 }}
       className="
-        mt-8 p-5 rounded-xl bg-white/40 backdrop-blur-md shadow-md 
-        border border-blue-300 max-w-xl mx-auto text-center
+        m-26 p-10 w-full max-w-4xl mx-auto 
+        bg-gradient-to-b from-[#1f1f25] to-[#2b2b33]
+        shadow-[0_0_20px_rgba(190,122,255,0.3)]
+        backdrop-blur-xl border border-white/10
+        text-center 
       "
       id="education"
     >
-      <h3 className="text-2xl font-semibold text-gray-500 mb-3">
-        Education
-      </h3>
+      <motion.h2
+        initial={{ opacity: 0, y: -15 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="text-4xl font-bold text-gray-200"
+      >
+        Education <span className="text-purple-300">Details</span>
+      </motion.h2>
 
-   
       <motion.img
-        src="convo.png"
+        src="/convo.png"
         alt="Gurukul College"
-        className="w-full h-70 object-cover rounded-lg shadow-lg mb-5"
-        initial={{ opacity: 0, scale: 0.95 }}
+        className="w-full max-h-80 object-cover mt-8 shadow-[0_0_5px_rgba(178,122,255,0.3)]"
+        initial={{ opacity: 0, scale: 0.92 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
       />
 
-      <p className="text-lg font-medium text-gray-900">
+      <p className="text-2xl font-semibold mt-6 text-gray-200">
         🎓 BSc IT — Gurukul College, Chiplun
       </p>
 
-      <p className="text-gray-700 mt-1">
-        Completed Bachelor's in <span className="text-blue-700">Information Technology.</span>
+      <p className="text-gray-200 mt-2 text-lg">
+        Completed Bachelor's in{" "}
+        <span className="text-purple-300">Information Technology</span>.
       </p>
     </motion.div>
   );
